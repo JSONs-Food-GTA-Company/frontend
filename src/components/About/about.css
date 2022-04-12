@@ -1,0 +1,95 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about--card {
+    margin: 50px 0px 100px 0px;
+    background-color: var(--orange);
+    width: 740px;
+    height: 250px;
+    border-radius: 40px;
+    display: flex;
+}
+
+.about--title {
+    color: var(--darkOrange);
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+    margin: 20px 0px 0px 0px;
+}
+
+.about--subtitle {
+    color: var(--darkOrange);
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: italic;
+    margin: 10px 0px 0px 40px;
+    font-weight: 300;
+}
+
+.about--team {
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    margin: 20px 0px 0px 40px;
+}
+
+.about--teamMembers {
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 8px 0px 0px 40px;
+    font-weight: 300;
+}
+
+.about--github {
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    margin: 20px 0px 0px 40px;
+}
+
+.about--githubLink a{
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 8px 0px 0px 40px;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.about--githubLink a:hover {
+    color: var(--yellow);
+}
+
+.about--image {
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.about--image img{
+    width: 250px;
+    height: auto;
+    margin: 0px -150px -5px 0px;
+}

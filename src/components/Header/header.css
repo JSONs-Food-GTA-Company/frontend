@@ -1,0 +1,32 @@
+.header {
+    height: 60px;
+    background: linear-gradient(to bottom,  var(--lightGrey), var(--lightIceWhite)); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header--logo img {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+    margin: 20px 0px 0px 20px;
+}
+
+.header--buttons {
+    width: 340px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 35px;
+}
+
+.header--buttons a {
+    cursor: pointer;
+    color: var(--darkGrey);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.header--buttons a:hover {
+    color: var(--yellow);
+}
