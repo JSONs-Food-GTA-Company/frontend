@@ -19,7 +19,7 @@ ReactDOM.render(
           <Route path='/about' element={<About />}></Route>
           <Route path='/createrestaurants' element={<RestaurantsCreate />}></Route>
           <Route path='/restaurantlist' element={<RestaurantList />}></Route>
-          <Route path='/restaurantmenu' element={<RestaurantMenu />}></Route>
+          <Route path='/restaurantmenu/:id' element={<RestaurantMenu />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

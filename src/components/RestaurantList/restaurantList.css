@@ -69,7 +69,7 @@
     text-decoration: none;
 }
 
-.restaurantList--infoBottom a{
+.restaurantList--infoBottom p{
     color: var(--white);
 }
 

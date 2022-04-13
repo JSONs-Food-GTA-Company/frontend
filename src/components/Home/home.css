@@ -31,7 +31,7 @@
 .header--card {
     margin-top: 70px;
     background-color: var(--orange);
-    width: 160vh;
+    width: 800px;
     height: 220px;
     border-radius: 40px;
     margin-bottom: 100px;
@@ -67,7 +67,7 @@
     text-decoration: none;
 }
 
-.header--cardBottom a {
+.header--cardBottom p {
     color: var(--white);
     transition: all ease 0.2s;
 }
@@ -76,7 +76,7 @@
     background-color: var(--yellow);
 }
 
-.header--cardBottom:hover a{
+.header--cardBottom:hover p{
     color: var(--darkOrange)
 }
 
