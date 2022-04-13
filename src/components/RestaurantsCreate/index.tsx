@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './RestaurantsCreate.css';
 
 
@@ -9,22 +10,23 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
         Cadastro de restaurante
       </header>
       <form className="form-restaurant">
-        <label>Nome do restaurante</label>
-        <input type="text" id="name" name="name"></input>
+        <label className='restaurants--label'>Nome do restaurante</label>
+        <input type="text" className='restaurants--input' id="name" name="name"></input>
 
-        <label>Descrição</label>
-        <input type="text" id="description" name="description"></input>
+        <label className='restaurants--label'>Descrição</label>
+        <input type="text" className='restaurants--input' id="description" name="description"></input>
 
-        <label>Nome do Responsável</label>
-        <input type="text" id="owner" name="owner"></input>
+        <label className='restaurants--label'>Nome do Responsável</label>
+        <input type="text" className='restaurants--input' id="owner" name="owner"></input>
 
-        <label>URL logo</label>
-        <input type="text" id="image_url" name="image_url"></input>
+        <label className='restaurants--label'>URL logo</label>
+        <input type="text" className='restaurants--input' id="image_url" name="image_url"></input>
 
-        <label>Endereço</label>
-        <input type="text" id="address" name="address"></input>
+        <label className='restaurants--label'>Endereço</label>
+        <input type="text" className='restaurants--input' id="address" name="address"></input>
 
-        <input type="submit" id="submit-button" value="cadastrar cardápio"></input>
+        <input type="submit" className='restaurants--submit' id="submit-button" value="cadastrar cardapio" formAction='{}'></input>
+        <Link to="/createProducts">cadastrar cardápio</Link>
       </form>
     </div>
   );
