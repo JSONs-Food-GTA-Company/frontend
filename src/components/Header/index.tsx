@@ -11,7 +11,7 @@ export const Header: React.FC<{}> = (props) => {
             <div className='header--buttons'>
                 <a><Link to="/">home </Link></a>
                 <a>restaurantes</a>
-                <a>cadastrar</a>
+                <a><Link to="/createrestaurants">cadastrar</Link></a>
                 <a><Link to="/about">sobre</Link></a>
             </div>
         </div>

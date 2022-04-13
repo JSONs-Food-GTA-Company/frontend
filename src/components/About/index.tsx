@@ -31,7 +31,7 @@ export const About: React.FC<{}> = (props) => {
                     </div>
                 </div>
                 <div className='about--image'>
-                <Link to="/"><img src="https://i.ibb.co/4VgJ3nv/mascot.png" alt="mascot" /></Link>
+                    <img src="https://i.ibb.co/4VgJ3nv/mascot.png" alt="mascot" />
                 </div>
             </div>
         </div>
