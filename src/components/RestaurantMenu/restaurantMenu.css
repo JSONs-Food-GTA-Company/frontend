@@ -1,0 +1,104 @@
+.restaurantMenu--titleArea {
+    width: 100%;
+    height: 130px;
+    background-color: var(--orange);
+    display: flex;
+}
+
+.restaurantMenu--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.restaurantMenu--image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: var(--white);
+    object-fit: cover;
+}
+
+.restaurantMenu--title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: -200px;
+}
+
+.restaurantMenu--title a {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.restaurantMenu--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.restaurantMenu--subtitle {
+    margin-left: -200px;
+    margin-top: 6px;
+}
+
+.restaurantMenu--subtitle a {
+    color: var(--lightOrange);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.restaurantMenu--foodArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px
+}
+
+.restaurantMenu--card {
+    margin-top: 50px;
+    background-color: var(--orange);
+    width: 160vh;
+    height: 180px;
+    border-radius: 90px;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.restaurantMenu--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.restaurantList--image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: var(--white);
+    object-fit: cover;
+}
+
+.restaurantList--infoTitle {
+    color: var(--white);
+    font-size: 28px;
+    margin-top: 16px;
+}
+
+.restaurantList--infoDescription {
+    color: var(--lightOrange);
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 8px;  
+    width: 500px;
+}
+
+

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './home.css';
 
 export const Home: React.FC<{}> = (props) => {
@@ -20,9 +21,9 @@ export const Home: React.FC<{}> = (props) => {
                     <div className='header--cardTitle'>
                         <a>Restaurantes</a>
                     </div>
-                    <div className='header--cardBottom'>
-                        <a>lista completa</a>
-                    </div>
+                        <Link to="/restaurantlist" className='header--cardBottom'>
+                            <a>lista completa</a>
+                        </Link>
                 </div>
 
                 <div className='header--cardRight'>

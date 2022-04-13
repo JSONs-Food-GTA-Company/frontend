@@ -5,6 +5,9 @@ import './index.css';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { About } from './components/About';
+import { RestaurantsCreate } from './components/RestaurantsCreate';
+import { RestaurantList } from './components/RestaurantList';
+import { RestaurantMenu } from './components/RestaurantMenu';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +17,9 @@ ReactDOM.render(
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
+          <Route path='/createrestaurants' element={<RestaurantsCreate />}></Route>
+          <Route path='/restaurantlist' element={<RestaurantList />}></Route>
+          <Route path='/restaurantmenu' element={<RestaurantMenu />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

@@ -31,7 +31,7 @@
 .header--card {
     margin-top: 70px;
     background-color: var(--orange);
-    width: 800px;
+    width: 160vh;
     height: 220px;
     border-radius: 40px;
     margin-bottom: 100px;
@@ -55,7 +55,6 @@
 
 .header--cardBottom {
     margin: 0px 0px 30px 30px;
-    color: var(--white);
     width: 150px;
     height: 40px;
     background-color: var(--darkOrange);
@@ -65,10 +64,19 @@
     align-items: center;
     cursor: pointer;
     transition: all ease 0.2s;
+    text-decoration: none;
+}
+
+.header--cardBottom a {
+    color: var(--white);
+    transition: all ease 0.2s;
 }
 
 .header--cardBottom:hover {
-    background-color: var(--yellow);;
+    background-color: var(--yellow);
+}
+
+.header--cardBottom:hover a{
     color: var(--darkOrange)
 }
 

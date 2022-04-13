@@ -20,7 +20,8 @@
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;    
+    font-weight: 700;
 }
 
 .about--subtitle {
@@ -40,13 +41,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-weight: 500;
+    font-weight: 300;
     margin: 20px 0px 0px 40px;
 }
 
 .about--teamMembers {
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -67,7 +68,7 @@
 
 .about--githubLink a{
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -91,5 +92,5 @@
 .about--image img{
     width: 250px;
     height: auto;
-    margin: 0px -150px -5px 0px;
+    margin: 0px -180px 0px 0px;
 }
