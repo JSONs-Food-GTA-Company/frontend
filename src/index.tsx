@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { RestaurantsCreate } from './components/RestaurantsCreate';
+import { ProductsCreate } from './components/ProductsCreate';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +16,8 @@ ReactDOM.render(
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
-          <Route path='/createrestaurants' element={<RestaurantsCreate />}></Route>
+          <Route path='/createRestaurants' element={<RestaurantsCreate />}></Route>
+          <Route path='/createProducts' element={<ProductsCreate />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
