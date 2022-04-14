@@ -5,21 +5,96 @@ import api from '../../services/api';
 import { Restaurant } from '../../shared/interface';
 
 export const RestaurantList: React.FC<{}> = (props) => {
-    const [restaurants, setRestaurants] = useState<Restaurant[]>();
+    const [restaurants, setRestaurants] = useState<Restaurant[]>([
+        {
+            id: 12,
+            name: "Abas Restaurant",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 15,
+            name: "Gabriels Restaurant",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 1,
+            name: "Restaurant 1",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 11,
+            name: "Restaurant 2",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 24,
+            name: "Ricardo",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 25,
+            name: "Ricardos Bar",
+            address: "Pernambuco",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br/logo_url",
+            owner: "Ricardo"
+        },
+        {
+            id: 16,
+            name: "Souzas Restaurant",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 19,
+            name: "Will",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "",
+            owner: "Dev de Pedreiro"
+        },
+        {
+            id: 18,
+            name: "Will Restaurant",
+            address: "QR 204 Conjunto 1",
+            description: "Restaurante melhor de todos",
+            logo_url: "www.google.com.br",
+            owner: "Dev de Pedreiro"
+        }
+    ]);
 
-    useEffect(() => {
-        getAllRestaurants()
-    }, [])
+    
 
-    function getAllRestaurants(){
-        api.get('restaurant', {
-            headers: {
-                'Content-Type': 'application/json'
-             } 
-        }).then((response) => {
-            setRestaurants(response.data)
-        })
-    }
+    // useEffect(() => {
+    //     getAllRestaurants()
+    // }, [])
+
+    // function getAllRestaurants(){
+    //     api.get('restaurant', {
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //          } 
+    //     }).then((response) => {
+    //         setRestaurants(response.data)
+    //     })
+    // }
 
     return (
         <div className='restaurantList'>

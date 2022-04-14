@@ -33,7 +33,7 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
   return (
     <div className="page-restaurant">
       <header className="restaurants--title">
-        Cadastro de restaurante
+        <p>Cadastro de restaurante</p>
       </header>
       <form className="form-restaurant">
         <label>Nome do restaurante</label>

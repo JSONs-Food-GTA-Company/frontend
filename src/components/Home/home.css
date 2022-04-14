@@ -14,27 +14,27 @@
 }
 
 .header--title {
-    font-size: 22px;
+    font-size: 2.1vw;
     color: var(--darkOrange);
-    margin-top: 40px;
-    width: 600px;
+    margin-top: 3vw;
+    width: 60vw;
     text-align: center;
 }
 
 .header--subTitle {
     color: var(--darkGrey);
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 1.3vw;
+    font-size: 1.5vw;
     font-weight: 300;
 }
 
 .header--card {
-    margin-top: 70px;
+    margin-top: 4vw;
     background-color: var(--orange);
-    width: 800px;
-    height: 220px;
-    border-radius: 40px;
-    margin-bottom: 100px;
+    width: 75vw;
+    height: 20vw;
+    border-radius: 4vw;
+    margin-bottom: 8vw;
     display: flex;
     justify-content: space-between;
 }
@@ -48,35 +48,36 @@
 
 .header--cardTitle {
     color: var(--white);
-    margin: 30px 0px 0px 30px;
-    font-size: 40px;
+    margin: 2vw 0px 0px 3vw;
+    font-size: 4vw;
     font-weight: 400;
 }
 
-.header--cardBottom {
-    margin: 0px 0px 30px 30px;
-    width: 150px;
-    height: 40px;
+.header--cardButton {
+    margin: 0px 0px 3vw 3vw;
+    width: 14vw;
+    height: 4vw;
     background-color: var(--darkOrange);
-    border-radius: 10px;
+    border-radius: 1.3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all ease 0.2s;
     text-decoration: none;
+    font-size: 1.5vw;
 }
 
-.header--cardBottom p {
+.header--cardButton p {
     color: var(--white);
     transition: all ease 0.2s;
 }
 
-.header--cardBottom:hover {
+.header--cardButton:hover {
     background-color: var(--yellow);
 }
 
-.header--cardBottom:hover p{
+.header--cardButton:hover p {
     color: var(--darkOrange)
 }
 
@@ -84,11 +85,112 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 34vw;
 }
 
 .header--cardRight img {
-    width: 250px;
+    width: 26vw;
     height: auto;
+}
+
+@media (max-width: 760px){
+    
+    .home {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header--titleArea {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header--title {
+        font-size: 18px;
+        margin-top: 10px;
+        flex: 1;
+    }
+    
+    .header--subTitle {
+        margin-top: 16px;
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .header--subTitle p {
+        text-align: center;
+    }
+    
+    .header--card {
+        margin-top: 20px;
+        width: 85vw;
+        height: 160px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .header--cardLeft {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header--cardTitle {
+        margin: 10px 0px 0px 16px;
+        font-size: 32px;
+        font-weight: 400;
+    }
+    
+    .header--cardButton {
+        margin: 16px 0px 8px 8px;
+        width: 160px;
+        height: 30px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .header--cardButton p {
+        color: var(--white);
+        transition: all ease 0.2s;
+    }
+    
+    .header--cardButton:hover {
+        background-color: var(--yellow);
+    }
+    
+    .header--cardButton:hover p{
+        color: var(--darkOrange)
+    }
+    
+    .header--cardRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .header--cardRight img {
+        margin-top: 2px;
+        width: 240px;
+        height: auto;
+    }
+
+    .header--card {
+        display: flex;
+        align-items: center;
+    }
 }
 
