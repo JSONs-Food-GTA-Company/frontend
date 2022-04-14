@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import api from '../../services/api';
 import './restaurantMenu.css';
 
@@ -22,7 +22,7 @@ interface Product {
 }
 
 export const RestaurantMenu: React.FC<{}> = (props) => {
-    // let { id } = useParams();
+    let { id } = useParams();
     const [restaurant, setRestaurant] = useState<RestaurantMenuData>({
         address: "QR 204 Conjunto 1",
         description: "Restaurante melhor de todos",
@@ -92,7 +92,7 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
                         <p>{restaurant?.name}</p>
                     </div>
                     <div className='restaurantMenu--subtitle'>
-                        <p>{restaurant?.description}</p>
+                        <p>{restaurant?.address}</p>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,25 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
                                 <p>{menu.description}</p>
                             </div>
                         </div>
+                        <div className='restaurantList--infoDescription'>
+                                <p>Adicional: 1</p>
+                                <p>Adicional: 2</p>
+                                <Link 
+                                    to={{ pathname: `/createadditional/${menu.id}`,}}
+                                >
+                                    <p>Cadastrar adicional</p>
+                                </Link>    
+                        </div>
                     </div>
                 )}
+            </div>
+
+            <div className='restaurantMenu--addProduct'>
+                <Link 
+                    to={{ pathname: `/createproducts/${id}`,}}
+                >
+                    <p>Cadastrar produto</p>
+                </Link>           
             </div>
 
         </div>

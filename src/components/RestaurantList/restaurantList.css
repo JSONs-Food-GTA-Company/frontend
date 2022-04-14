@@ -7,7 +7,7 @@
 
 .restaurantList--title {
     color: var(--darkOrange);
-    font-size: 40px;
+    font-size: 42px;
     display: flex;
     justify-content: flex-start;
     font-weight: 700;
@@ -15,12 +15,12 @@
 }
 
 .restaurantList--card {
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: var(--orange);
-    width: 160vh;
-    height: 180px;
+    width: 800px;
+    height: 160px;
     border-radius: 90px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     display: flex;
 }
 

@@ -29,7 +29,7 @@
     margin-left: -200px;
 }
 
-.restaurantMenu--title a {
+.restaurantMenu--title p {
     color: var(--white);
     font-size: 40px;
     font-weight: 700;
@@ -48,7 +48,7 @@
     margin-top: 6px;
 }
 
-.restaurantMenu--subtitle a {
+.restaurantMenu--subtitle p {
     color: var(--lightOrange);
     font-style: italic;
     font-size: 14px;
@@ -58,17 +58,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px
+    margin-top: 5px;
+    flex-direction: column;
 }
 
 .restaurantMenu--card {
-    margin-top: 50px;
+    margin-top: 15px;
     background-color: var(--orange);
     width: 160vh;
     height: 180px;
     border-radius: 90px;
-    margin-bottom: 100px;
     display: flex;
+    margin-bottom: 15px;
 }
 
 .restaurantMenu--image {

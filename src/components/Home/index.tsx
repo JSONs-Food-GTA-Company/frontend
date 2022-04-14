@@ -22,7 +22,7 @@ export const Home: React.FC<{}> = (props) => {
                         <a>Restaurantes</a>
                     </div>
                         <Link to="/restaurantlist" className='header--cardBottom'>
-                            <a>lista completa</a>
+                            <p>lista completa</p>
                         </Link>
                 </div>
 

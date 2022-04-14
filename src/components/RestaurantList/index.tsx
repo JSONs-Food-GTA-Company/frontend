@@ -2,14 +2,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './restaurantList.css';
 import api from '../../services/api';
+import { Restaurant } from '../../shared/interface';
 
-export interface Restaurant {
-    id: number,
-    name: string,
-    address: string,
-    description: string,
-    logo_url: string,
-    owner: string
+interface Props {
+    list: Array<Restaurant>
 }
 
 export const RestaurantList: React.FC<{}> = (props) => {
