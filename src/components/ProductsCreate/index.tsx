@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import api from '../../services/api';
 import './ProductsCreate.css';
 
 
 export const ProductsCreate: React.FC<{}> = (props) => {
-
     let { id } = useParams();
 
     const [productName, setProductName] = useState('')
@@ -13,14 +13,22 @@ export const ProductsCreate: React.FC<{}> = (props) => {
     const [productImage_url, setProductImage_url] = useState('')
 
     function handleCreateProduct() {
-    const data={
-        name: productName,
-        description: productDescription,
-        price: Number(productPrice),
-        image_url: productImage_url,    
-        restaurant_id: Number(id),
-    }
-    console.log(data)
+      const data={
+          name: productName,
+          description: productDescription,
+          price: Number(productPrice),
+          image_url: productImage_url,    
+          restaurant_id: Number(id),
+      }
+
+      api.post('product', 
+        data
+      ).then((response) => {
+        alert(`RESPONSE DO CREATE: ${response}`)
+      })
+      .catch((error) => {
+        alert(`Response ERROR:: ${error}`)
+      });
     }
 
   return (

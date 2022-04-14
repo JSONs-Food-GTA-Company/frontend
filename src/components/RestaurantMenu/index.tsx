@@ -19,57 +19,20 @@ interface Product {
     description: string,
     image_url: string,
     price: number,
+    adds_item: Additional[]
+}
+
+interface Additional {
+    id: number,
+    item: string,
+    price: number
 }
 
 export const RestaurantMenu: React.FC<{}> = (props) => {
     let { id } = useParams();
-    const [restaurant, setRestaurant] = useState<RestaurantMenuData>({
-        address: "QR 204 Conjunto 1",
-        description: "Restaurante melhor de todos",
-        id: 16,
-        logo_url: "www.google.com.br",
-        name: "Souzas Restaurant",
-        owner: "Dev de Pedreiro",
-        products: [
-            {
-                id: 1,
-                name: "Pepsi",
-                description: "Refrigerante 2L",
-                image_url: "www.google.com.br",
-                price: 6.5,
-            },
-            {
-                id: 2,
-                name: "Pastel",
-                description: "Pastel com delicioso frango",
-                image_url: "www.google.com.br",
-                price: 8,
-            },
-            {
-                id: 3,
-                name: "Coxinha",
-                description: "Deliciosa coxinha",
-                image_url: "www.google.com.br",
-                price: 4,
-            },
-            {
-                id: 4,
-                name: "Coxinha",
-                description: "Deliciosa coxinha",
-                image_url: "www.google.com.br",
-                price: 4,
-            },
-            {
-                id: 5,
-                name: "Camarão Internacional",
-                description: "Delicioso camarão",
-                image_url: "www.google.com.br",
-                price: 80,
-            }
-        ]
-    });
+    const [restaurant, setRestaurant] = useState<RestaurantMenuData>();
 
-    /* useEffect(() => {
+    useEffect(() => {
         getAllRestaurants()
     }, [])
 
@@ -77,7 +40,7 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
         api.get(`restaurant/${id}`).then((response) => {
             setRestaurant(response.data)
         })
-    } */
+    }
 
     return (
         
@@ -112,13 +75,17 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
                             </div>
                         </div>
                         <div className='restaurantList--infoDescription'>
-                                <p>Adicional: 1</p>
-                                <p>Adicional: 2</p>
-                                <Link 
-                                    to={{ pathname: `/createadditional/${menu.id}`,}}
-                                >
-                                    <p>Cadastrar adicional</p>
-                                </Link>    
+                            {menu.adds_item.map((additional) =>
+                                <div key={additional.id}>
+                                    <p>{additional.item}</p>
+                                    <p>{additional.price}</p>
+                                </div> 
+                            )}
+                            <Link 
+                                to={{ pathname: `/createadditional/${menu.id}`,}}
+                            >
+                                <p>Cadastrar adicional</p>
+                            </Link>    
                         </div>
                     </div>
                 )}

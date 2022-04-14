@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import api from '../../services/api';
 import './AdditionalCreate.css';
 
 export const AdditionalCreate: React.FC<{}> = (props) => {
-
   let { id } = useParams();
+  let navigate = useNavigate();
 
   const [additionalName, setAdditionalName] = useState('')
   const [additionalPrice, setAdditionalPrice] = useState('')
   
   function handleCreateAdditional() {
     const data={
-      name: additionalName,
+      item: additionalName,
       price: Number(additionalPrice),
+      quantity: 1,
       product_id: Number(id),
     }
-    console.log(data)
+    
+    api.post('adds-item', 
+        data
+      ).then((response) => {
+        alert(`RESPONSE DO CREATE: ${response}`)
+      })
+      .catch((error) => {
+        alert(`Response ERROR:: ${error}`)
+      });
   }
     
   return (
@@ -25,15 +35,15 @@ export const AdditionalCreate: React.FC<{}> = (props) => {
       </header>
       <form className="form-restaurant">
         <label>Nome do adicional</label>
-        <input value={additionalName} onChange={e => setAdditionalName(e.target.value)} type="text" id="name" name="name"></input>
+        <input value={additionalName} onChange={e => setAdditionalName(e.target.value)} type="text" name="name"></input>
 
         <label>Preço</label>
-        <input value={additionalPrice} onChange={e => setAdditionalPrice(e.target.value)} type="number" id="price" name="price"></input>
+        <input value={additionalPrice} onChange={e => setAdditionalPrice(e.target.value)} type="number" name="price"></input>
         
         <div className='restaurant--bottomArea'>
-          <Link to="/restaurantcreateok" className='restaurant--botton'>
-            <button onClick={handleCreateAdditional}>cadastrar</button>
-          </Link>
+
+        <button className='restaurant--botton' onClick={handleCreateAdditional}>cadastrar</button>
+
         </div>
 
       </form>

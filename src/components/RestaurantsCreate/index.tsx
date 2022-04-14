@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import api from '../../services/api';
 import './RestaurantsCreate.css';
 
 export const RestaurantsCreate: React.FC<{}> = (props) => {
@@ -18,7 +19,15 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
       logo_url: restaurantImage_url,
       owner: restaurantOwner,     
     }
-    console.log(data)
+
+    api.post('restaurant', 
+      data
+    ).then((response) => {
+      alert(`RESPONSE DO CREATE: ${response}`)
+    })
+    .catch((error) => {
+      alert(`RESPONSE error: ${error}`)
+    });
   }
     
   return (
