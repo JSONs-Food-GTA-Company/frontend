@@ -112,7 +112,6 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
     return (
         
         <div className='restaurantMenu'>
-            {console.log('restaurant ', restaurant)}
             <div className='restaurantMenu--titleArea'>
                 <div className='restaurantMenu--image'>
                     <img src="https://i.ibb.co/MRvHqwT/Logo-Pizzaria-Dom-Ant-nio-Italian-Food.png" alt="logoRestaurant" />

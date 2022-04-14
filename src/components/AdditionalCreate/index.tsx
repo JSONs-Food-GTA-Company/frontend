@@ -5,12 +5,21 @@ import './AdditionalCreate.css';
 
 export const AdditionalCreate: React.FC<{}> = (props) => {
   let { id } = useParams();
-  let navigate = useNavigate();
+  let navigation = useNavigate();
 
   const [additionalName, setAdditionalName] = useState('')
   const [additionalPrice, setAdditionalPrice] = useState('')
   
-  function handleCreateAdditional() {
+  function handleCreateAdditional(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault()
+    if (additionalName === '') {
+      alert('Preencha o nome do adicional!')
+      return
+    } else if (!additionalPrice) {
+      alert('Preço deve ser um número')
+      return
+    }
+
     const data={
       item: additionalName,
       price: Number(additionalPrice),
@@ -21,10 +30,11 @@ export const AdditionalCreate: React.FC<{}> = (props) => {
     api.post('adds-item', 
         data
       ).then((response) => {
-        alert(`RESPONSE DO CREATE: ${response}`)
+        alert(`Adicional criado com sucesso!`)
+        navigation(-1)
       })
       .catch((error) => {
-        alert(`Response ERROR:: ${error}`)
+        alert(`Erro ao criar adicional. ${error}`)
       });
   }
     
@@ -41,9 +51,7 @@ export const AdditionalCreate: React.FC<{}> = (props) => {
         <input value={additionalPrice} onChange={e => setAdditionalPrice(e.target.value)} type="number" name="price"></input>
         
         <div className='restaurant--bottomArea'>
-
-        <button className='restaurant--botton' onClick={handleCreateAdditional}>cadastrar</button>
-
+          <button className='restaurant--botton' onClick={(e) => handleCreateAdditional(e)}>cadastrar</button>
         </div>
 
       </form>
