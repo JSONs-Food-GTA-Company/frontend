@@ -67,7 +67,7 @@
 }
 
 
-button:hover {
+.restaurant--button:hover {
     background-color: var(--yellow);
     color: var(--darkOrange);
     text-decoration-color: var(--yellow);

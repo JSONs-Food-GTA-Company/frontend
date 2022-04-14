@@ -112,6 +112,7 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
     return (
         
         <div className='restaurantMenu'>
+            {console.log('restaurant ', restaurant)}
             <div className='restaurantMenu--titleArea'>
                 <div className='restaurantMenu--image'>
                     <img src="https://i.ibb.co/MRvHqwT/Logo-Pizzaria-Dom-Ant-nio-Italian-Food.png" alt="logoRestaurant" />
@@ -161,9 +162,7 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
                                     </div> 
                                 )}
                                 <div className='restaurantMenu--infoAdditionalButton'>
-                                    <Link 
-                                        to={{ pathname: `/createadditional/${menu.id}`,}}
-                                    >
+                                    <Link to={{ pathname: `/createadditional/${menu.id}`,}}>
                                         <p>Cadastrar adicional</p>
                                     </Link>    
                                 </div>
@@ -174,10 +173,8 @@ export const RestaurantMenu: React.FC<{}> = (props) => {
                 )}
 
                 <div className='restaurantMenu--addProduct'>
-                    <Link 
-                        to={{ pathname: `/createproducts/${id}`,}}
-                    >
-                        <p>Cadastrar produto</p>
+                    <Link to={{ pathname: `/createproducts/${id}`}}>
+                        <button className='restaurantMenu--button'><p>Cadastrar produto</p></button>
                     </Link>           
                 </div>
             </div>

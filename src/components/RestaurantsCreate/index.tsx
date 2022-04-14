@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import './RestaurantsCreate.css';
 
 export const RestaurantsCreate: React.FC<{}> = (props) => {
-  const navigation = useNavigate()
+
   const [restaurantName, setRestaurantName] = useState('')
   const [restaurantDescription, setRestaurantDescription] = useState('')
   const [restaurantOwner, setRestaurantOwner] = useState('')
@@ -12,11 +12,6 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
   const [restaurantAddress, setRestaurantAddress] = useState('')
   
   function handleCreateRestaurant() {
-    if (restaurantName === '' || restaurantDescription === '' || restaurantOwner === '' || restaurantAddress === '') {
-      alert('Preencha todos os campos!')
-      return
-    }
-
     const data={
       name: restaurantName,
       address: restaurantAddress,
@@ -28,11 +23,10 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
     api.post('restaurant', 
       data
     ).then((response) => {
-      alert(`Restaurante criado com sucesso!`)
-      navigation('/')
+      alert(`RESPONSE DO CREATE: ${response}`)
     })
     .catch((error) => {
-      alert(`Erro ao criar restaurante: ${error}`)
+      alert(`RESPONSE error: ${error}`)
     });
   }
     
@@ -59,9 +53,9 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
         <label className='restaurants--Label'><p>Endereço</p></label>
         <input className='restaurants--input' value={restaurantAddress} onChange={e => setRestaurantAddress(e.target.value)} type="text" id="address" name="address"></input>
         
-        <div className='restaurant--bottonArea'>
-          <Link to="" className='restaurant--botton'>
-            <button onClick={handleCreateRestaurant}>cadastrar</button>
+        <div className='restaurant--buttonArea'>
+          <Link to="/restaurantcreateok" className='cc'>
+            <button className='restaurant--button' onClick={handleCreateRestaurant}><p>cadastrar</p></button>
           </Link>
         </div>
 
