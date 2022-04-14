@@ -104,7 +104,7 @@ export const RestaurantList: React.FC<{}> = (props) => {
             {restaurants?.map((restaurant) => 
                 <div key={restaurant.id} className='restaurantList--card'>
                     <div className='restaurantList--image'>
-                        <img src="https://i.ibb.co/MRvHqwT/Logo-Pizzaria-Dom-Ant-nio-Italian-Food.png" alt="mascot" />
+                        <img src="https://i.ibb.co/MRvHqwT/Logo-Pizzaria-Dom-Ant-nio-Italian-Food.png" alt="RestaurantImage"></img>
                     </div>
                     <div className='restaurantList--info'>
                         <div className='restaurantList--infoTitle'>

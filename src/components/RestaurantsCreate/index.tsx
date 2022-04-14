@@ -32,32 +32,34 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
     
   return (
     <div className="page-restaurant">
-      <header className="restaurants--title">
+
+      <div className="restaurants--title">
         <p>Cadastro de restaurante</p>
-      </header>
-      <form className="form-restaurant">
-        <label>Nome do restaurante</label>
-        <input value={restaurantName} onChange={e => setRestaurantName(e.target.value)} type="text" id="name" name="name"></input>
+      </div>
 
-        <label>Descrição</label>
-        <input value={restaurantDescription} onChange={e => setRestaurantDescription(e.target.value)} type="text" id="description" name="description"></input>
+      <div className="form-restaurant">
+        <label className='restaurants--Label'><p>Nome do restaurante</p></label>
+        <input className='restaurants--input' value={restaurantName} onChange={e => setRestaurantName(e.target.value)} type="text" id="name" name="name"></input>
 
-        <label>Nome do Responsável</label>
-        <input value={restaurantOwner} onChange={e => setRestaurantOwner(e.target.value)} type="text" id="owner" name="owner"></input>
+        <label className='restaurants--Label'><p>Descrição</p></label>
+        <input className='restaurants--input' value={restaurantDescription} onChange={e => setRestaurantDescription(e.target.value)} type="text" id="description" name="description"></input>
 
-        <label>URL logo</label>
-        <input value={restaurantImage_url} onChange={e => setRestaurantImage_url(e.target.value)} type="text" id="image_url" name="image_url"></input>
+        <label className='restaurants--Label'><p>Nome do Responsável</p></label>
+        <input className='restaurants--input' value={restaurantOwner} onChange={e => setRestaurantOwner(e.target.value)} type="text" id="owner" name="owner"></input>
 
-        <label>Endereço</label>
-        <input value={restaurantAddress} onChange={e => setRestaurantAddress(e.target.value)} type="text" id="address" name="address"></input>
+        <label className='restaurants--Label'><p>URL logo</p></label>
+        <input className='restaurants--input' value={restaurantImage_url} onChange={e => setRestaurantImage_url(e.target.value)} type="text" id="image_url" name="image_url"></input>
+
+        <label className='restaurants--Label'><p>Endereço</p></label>
+        <input className='restaurants--input' value={restaurantAddress} onChange={e => setRestaurantAddress(e.target.value)} type="text" id="address" name="address"></input>
         
-        <div className='restaurant--bottomArea'>
+        <div className='restaurant--buttonArea'>
           <Link to="/restaurantcreateok" className='restaurant--botton'>
-            <button onClick={handleCreateRestaurant}>cadastrar</button>
+            <button className='restaurant--button' onClick={handleCreateRestaurant}><p>cadastrar</p></button>
           </Link>
         </div>
 
-      </form>
+      </div>
     </div>
   );
 }

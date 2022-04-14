@@ -7,59 +7,69 @@
 
 .restaurantList--title {
     color: var(--darkOrange);
-    font-size: 42px;
+    font-size: 4.5vw;
     display: flex;
     justify-content: flex-start;
     font-weight: 700;
-    margin: 40px 0px 0px 0px;
+    margin: 3vw 0px 0px 0px;
 }
 
 .restaurantList--card {
-    margin-top: 30px;
+    margin-top: 3vw;
     background-color: var(--orange);
-    width: 800px;
-    height: 160px;
-    border-radius: 90px;
-    margin-bottom: 0px;
+    width: 70vw;
+    height: 14vw;
+    border-radius: 10vw;
     display: flex;
+    align-items: center;
 }
 
 .restaurantList--image {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.restaurantList--image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    background-color: var(--white);
+    margin-left: 2vw;
+    margin-right: 3vw;
+    width: 12vw;
+    height: 10vw;
+    border-radius: 50%;
     object-fit: cover;
 }
 
-.restaurantList--infoTitle {
-    color: var(--white);
-    font-size: 28px;
-    margin-top: 16px;
+.restaurantList--image img {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 5vw;
+    object-fit: cover;
 }
 
-.restaurantList--infoDescription {
+.restaurantList--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.restaurantList--infoTitle p{
+    color: var(--white);
+    font-size: 3vw;
+}
+
+.restaurantList--infoDescription p{
     color: var(--lightOrange);
-    font-size: 14px;
+    font-size: 1.4vw;
     font-style: italic;
-    margin-top: 8px;  
-    width: 500px;
+    width: 100%;
 }
 
 .restaurantList--infoBottom {
-    font-size: 12px;
-    margin-top: 30px;
-    width: 120px;
-    height: 30px;
-    border-radius: 60px;
+    font-size: 1.2vw;
+    margin-top: 1.2vw;
+    width: 12vw;
+    height: 3vw;
+    border-radius: 6vw;
     background-color: var(--darkOrange);
     display: flex;
     justify-content: center;

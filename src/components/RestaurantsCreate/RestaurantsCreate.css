@@ -4,64 +4,133 @@
     align-items: center;
 }
 
+.page-restaurant {
+    margin: 2vw 0px 0px 0px;
+}
+
 .restaurants--title{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 4.5vw;
-    line-height: 6vw;  
     text-align: center;  
+    height: 8vw;
     color: var(--darkOrange);
-    margin: 3vw 0px 0px 0px;
-}  
-
-label{
-    margin-left: 92px;
-    margin-top: 20;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 19px;
-    line-height: 38px;
-    color: var(--darkGrey);
-}
-
-input{
-    width: 900px;
-    height: 40px;
-    margin-left: 91px;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid var(--lightGrey);
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    color: var(--darkGrey);
-    padding-left: 10px;
-}
-
-button{
-    width: 200px;
-    height: 40px;
-    left: 539px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: #E6482B;
-    border-radius: 19px;
+    margin: 1vw 0px 0vw 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
-    font-size: 19px;
+}  
+
+.restaurants--title p {
+    font-size: 4.5vw;
+}
+
+.restaurants--Label{
+    margin-left: 9vw;
+    margin-top: 0.8vw;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 2vw;
+    line-height: 3.5vw;
+    color: var(--darkGrey);
+}
+
+.restaurants--input {
+    width: 85vw;
+    height: 4vw;
+    margin-left: 9vw;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.1vw solid var(--lightGrey);
+    box-sizing: border-box;
+    margin-bottom: 2vw;
+    color: var(--darkGrey);
+    padding-left: 1.2vw;
+    font-size: 1.6vw;
+}
+
+.restaurant--button {
+    width: 16vw;
+    height: 4vw;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+    background: var(--orange);
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.8vw;
     border: 0px;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
 }
+
 
 button:hover {
     background-color: var(--yellow);
     color: var(--darkOrange);
+    text-decoration-color: var(--yellow);
 }
 
-.restaurant--bottomArea {
+.restaurant--buttonArea {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 760px){ 
+
+    .form-restaurant {
+        padding-top: 20px;
+    }
+    
+    .restaurants--title{
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;  
+        height: 0px;
+        color: var(--darkOrange);
+        margin: 0px 0px 0vw 0px;
+    }  
+    
+    .restaurants--title p {
+        font-size: 26px;
+    }
+    
+    .restaurants--Label{
+        margin-left: 30px;
+        margin-top: 6px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .restaurants--input {
+        width: 85vw;
+        height: 30px;
+        margin-left: 30px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 12px;
+    }
+    
+    .restaurant--button {
+        width: 120px;
+        height: 40px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        background: var(--orange);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 16px;
+        border: 0px;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: var(--orange);
+    }
+    
 }

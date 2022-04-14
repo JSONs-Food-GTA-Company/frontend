@@ -1,22 +1,45 @@
 .restaurantMenu--titleArea {
     width: 100%;
-    height: 130px;
+    height: 10vw;
     background-color: var(--orange);
     display: flex;
+    align-items: center;
 }
 
 .restaurantMenu--image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 4vw;
+    background-color: var(--white);
+    margin-left: 2vw;
 }
 
 .restaurantMenu--image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background-color: var(--white);
+    width: 10vw;
+}
+
+.restaurantMenu--imageFood {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurantMenu--imageFood img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 5vw;
+    object-fit: cover;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.restaurantMenu--image img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 5vw;
     object-fit: cover;
 }
 
@@ -25,13 +48,13 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
-    margin-left: -200px;
+    margin-top: 0vw;
+    margin-left: -8vw;
 }
 
 .restaurantMenu--title p {
     color: var(--white);
-    font-size: 40px;
+    font-size: 3vw;
     font-weight: 700;
 }
 
@@ -44,62 +67,132 @@
 }
 
 .restaurantMenu--subtitle {
-    margin-left: -200px;
-    margin-top: 6px;
+    margin-left: -8vw;
+    margin-top: 0.1vw;
 }
 
 .restaurantMenu--subtitle p {
     color: var(--lightOrange);
     font-style: italic;
-    font-size: 14px;
+    font-size: 1.2vw;
 }
 
 .restaurantMenu--foodArea {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 2vw;
     flex-direction: column;
 }
 
 .restaurantMenu--card {
-    margin-top: 15px;
+    margin-top: 1vw;
     background-color: var(--orange);
-    width: 160vh;
-    height: 180px;
-    border-radius: 90px;
+    width: 80vw;
+    height: 14vw;
+    border-radius: 7vw;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 1vw;
 }
 
 .restaurantMenu--image {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
 }
 
-.restaurantList--image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    background-color: var(--white);
-    object-fit: cover;
-}
-
-.restaurantList--infoTitle {
+.restaurantMenu--infoTitle p{
     color: var(--white);
-    font-size: 28px;
-    margin-top: 16px;
+    font-size: 3vw;
 }
 
-.restaurantList--infoDescription {
+.restaurantMenu--infoPrice p {
     color: var(--lightOrange);
-    font-size: 14px;
+    font-size: 1.4vw;
+    margin-top: 2.4vw;
     font-style: italic;
-    margin-top: 8px;  
+}
+
+.restaurantMenu--infoDescription {
+    color: var(--lightOrange);
+    font-size: 1.4vw;
+    font-style: italic;
+    margin-top: 0.1vw;  
     width: 500px;
 }
 
+.restaurantMenu--infoFood {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.restaurantMenu--infoContentArea {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.restaurantMenu--infoAdditional {
+    background-color: var(--yellow);
+    width: 30vw;
+    border-radius: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white);
+}
+
+.restaurantMenu--infoAdditionalTitle p {
+    font-size: 2vw;
+    margin-top: 1.8vw;
+}
+
+.restaurantMenu--infoAdditionalDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1vw;
+}
+.restaurantMenu--infoAdditionalDetail p {
+    font-size: 1.2vw;
+}
+
+.restaurantMenu--infoAdditionalButton {
+    margin-top: 1.2vw;
+    font-size: 1vw;
+    width: 10vw;
+    height: 2.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vw;
+    background-color: var(--darkYellow);
+}
+
+.restaurantMenu--infoAdditionalButton p {
+    text-decoration: none;
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-color: var(--darkYellow);
+}
+
+.restaurantMenu--addProduct {
+    font-size: 1.6vw;
+    margin: 2vw 0vw 2vw 0vw;
+    background-color: var(--orange);
+    width: 18vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10vw;
+}
+
+.restaurantMenu--addProduct p {
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
