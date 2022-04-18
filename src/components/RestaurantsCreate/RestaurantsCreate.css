@@ -67,6 +67,19 @@
 }
 
 
+.restaurant--button:hover {
+    background-color: var(--yellow);
+    color: var(--darkOrange);
+    text-decoration-color: var(--yellow);
+}
+
+.restaurant--buttonArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 button:hover {
     background-color: var(--yellow);
     color: var(--darkOrange);

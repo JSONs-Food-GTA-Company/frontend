@@ -33,81 +33,17 @@ interface Additional {
 
 export const RestaurantMenu: React.FC<{}> = (props) => {
     let { id } = useParams();
-    const [restaurant, setRestaurant] = useState<RestaurantMenuData>(
-        {
-            id: 16,
-            name: "Souzas Restaurant",
-            address: "QR 204 Conjunto 1",
-            description: "Restaurante melhor de todos",
-            logo_url: "www.google.com.br",
-            owner: "Dev de Pedreiro",
-            products: [
-                {
-                    id: 2,
-                    name: "Pastel",
-                    description: "Pastel com delicioso frango",
-                    image_url: "www.google.com.br",
-                    price: 8,
-                    restaurant_id: 16,
-                    adds_item: [
-                        {
-                            id: 1,
-                            item: "bacon",
-                            quantity: 1,
-                            price: 8.9,
-                            product_id: 2
-                        }
-                    ]
-                },
-                {
-                    id: 5,
-                    name: "Camarão Internacional",
-                    description: "Delicioso camarão",
-                    image_url: "www.google.com.br",
-                    price: 80,
-                    restaurant_id: 16,
-                    adds_item: []
-                },
-                {
-                    id: 4,
-                    name: "Coxinha",
-                    description: "Deliciosa coxinha",
-                    image_url: "www.google.com.br",
-                    price: 4,
-                    restaurant_id: 16,
-                    adds_item: []
-                },
-                {
-                    id: 1,
-                    name: "Pepsi",
-                    description: "Refrigerante 2L",
-                    image_url: "www.google.com.br",
-                    price: 6.5,
-                    restaurant_id: 16,
-                    adds_item: []
-                },
-                {
-                    id: 3,
-                    name: "Coxinha",
-                    description: "Deliciosa coxinha",
-                    image_url: "www.google.com.br",
-                    price: 4,
-                    restaurant_id: 16,
-                    adds_item: []
-                }
-            ]
-        }
-    );
+    const [restaurant, setRestaurant] = useState<RestaurantMenuData>();
 
-    // useEffect(() => {
-    //     getAllRestaurants()
-    // }, [])
+    useEffect(() => {
+        getAllRestaurants()
+    }, [])
 
-    // function getAllRestaurants(){
-    //     api.get(`restaurant/${id}`).then((response) => {
-    //         setRestaurant(response.data)
-    //     })
-    // }
+    function getAllRestaurants(){
+        api.get(`restaurant/${id}`).then((response) => {
+            setRestaurant(response.data)
+        })
+    }
 
     return (
         

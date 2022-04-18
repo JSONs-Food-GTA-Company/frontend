@@ -59,9 +59,9 @@ export const RestaurantsCreate: React.FC<{}> = (props) => {
         <label className='restaurants--Label'><p>Endereço</p></label>
         <input className='restaurants--input' value={restaurantAddress} onChange={e => setRestaurantAddress(e.target.value)} type="text" id="address" name="address"></input>
         
-        <div className='restaurant--bottonArea'>
-          <Link to="" className='restaurant--botton'>
-            <button onClick={handleCreateRestaurant}>cadastrar</button>
+        <div className='restaurant--buttonArea'>
+          <Link to="" className='cc'>
+            <button className='restaurant--button' onClick={handleCreateRestaurant}><p>cadastrar</p></button>
           </Link>
         </div>
 

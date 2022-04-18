@@ -39,22 +39,22 @@ export const AdditionalCreate: React.FC<{}> = (props) => {
   }
     
   return (
-    <div className="page-restaurant">
-      <header className="restaurants--title">
-        Cadastro de restaurante
-      </header>
-      <form className="form-restaurant">
-        <label>Nome do adicional</label>
-        <input value={additionalName} onChange={e => setAdditionalName(e.target.value)} type="text" name="name"></input>
+    <div className="page-additional">
+      <div className="additional--title">
+        <p>Cadastro de adicional do Produto</p>
+      </div>
+      <div className="additional--contentArea">
+        <label className='additional--Label'>Nome do adicional</label>
+        <input className='additional--input' value={additionalName} onChange={e => setAdditionalName(e.target.value)} type="text" name="name"></input>
 
-        <label>Preço</label>
-        <input value={additionalPrice} onChange={e => setAdditionalPrice(e.target.value)} type="number" name="price"></input>
+        <label className='additional--Label'>Preço</label>
+        <input className='additional--input' value={additionalPrice} onChange={e => setAdditionalPrice(e.target.value)} type="number" name="price"></input>
         
-        <div className='restaurant--bottomArea'>
-          <button className='restaurant--botton' onClick={(e) => handleCreateAdditional(e)}>cadastrar</button>
+        <div className='additional--buttonArea'>
+          <button className='additional--button' onClick={(e) => handleCreateAdditional(e)}><p>cadastrar</p></button>
         </div>
 
-      </form>
+      </div>
     </div>
   );
 }

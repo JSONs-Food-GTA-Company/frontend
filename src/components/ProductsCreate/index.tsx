@@ -40,31 +40,33 @@ export const ProductsCreate: React.FC<{}> = (props) => {
       });
     }
 
-  return (
-    <div className="products">
-      <header className="products--title">
-        Cadastro de produtos
-      </header>
-      <form className="products--form">
-        <label className='products--label'>Nome do produto</label>
-        <input value={productName} onChange={e => setProductName(e.target.value)} type="text" className='products--input' id="name" name="name"></input>
-
-        <label className='products--label'>Descrição</label>
-        <input value={productDescription} onChange={e => setProductDescription(e.target.value)} type="text" className='products--input' id="description" name="description"></input>
-
-        <label className='products--label'>Valor</label>
-        <input value={productPrice} onChange={e => setProductPrice(e.target.value)} type="number" className='products--input' id="price" name="price"></input>
-
-        <label className='products--label'>URL da imagem do produto</label>
-        <input  value={productImage_url} onChange={e => setProductImage_url(e.target.value)} type="url" className='products--input' id="image_url" name="image_url"></input>
-
-        <div className='restaurant--bottomArea'>
-          <Link to="" className='restaurant--botton'>
-            <button onClick={handleCreateProduct}>cadastrar</button>
-          </Link>
+    return (
+      <div className="products">
+  
+        <div className="products--title">
+          <p>Cadastro de produtos</p>
         </div>
-
-      </form>
-    </div>
-  );
-}
+  
+        <form className="products--form">
+          <label className='products--label'>Nome do produto</label>
+          <input value={productName} onChange={e => setProductName(e.target.value)} type="text" className='products--input' id="name" name="name"></input>
+  
+          <label className='products--label'>Descrição</label>
+          <input value={productDescription} onChange={e => setProductDescription(e.target.value)} type="text" className='products--input' id="description" name="description"></input>
+  
+          <label className='products--label'>Valor</label>
+          <input value={productPrice} onChange={e => setProductPrice(e.target.value)} type="text" className='products--input' id="price" name="price"></input>
+  
+          <label className='products--label'>URL da imagem do produto</label>
+          <input  value={productImage_url} onChange={e => setProductImage_url(e.target.value)} type="url" className='products--input' id="image_url" name="image_url"></input>
+  
+          <div className='products--buttonArea'>
+            <Link to="" className='products--button'>
+              <button className='products--buttonOK' onClick={handleCreateProduct}><p>cadastrar</p></button>
+            </Link>
+          </div>
+  
+        </form>
+      </div>
+    );
+  }
