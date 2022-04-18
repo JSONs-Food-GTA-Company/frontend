@@ -4,7 +4,7 @@ import api from '../../services/api';
 import './RestaurantsCreate.css';
 
 export const RestaurantsCreate: React.FC<{}> = (props) => {
-  const navigation = useNavigate()
+  const navigation = useNavigate();
   const [restaurantName, setRestaurantName] = useState('')
   const [restaurantDescription, setRestaurantDescription] = useState('')
   const [restaurantOwner, setRestaurantOwner] = useState('')

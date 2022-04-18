@@ -55,7 +55,7 @@ export const ProductsCreate: React.FC<{}> = (props) => {
           <input value={productDescription} onChange={e => setProductDescription(e.target.value)} type="text" className='products--input' id="description" name="description"></input>
   
           <label className='products--label'>Valor</label>
-          <input value={productPrice} onChange={e => setProductPrice(e.target.value)} type="text" className='products--input' id="price" name="price"></input>
+          <input value={productPrice} onChange={e => setProductPrice(e.target.value)} type="number" className='products--input' id="price" name="price"></input>
   
           <label className='products--label'>URL da imagem do produto</label>
           <input  value={productImage_url} onChange={e => setProductImage_url(e.target.value)} type="url" className='products--input' id="image_url" name="image_url"></input>

@@ -179,20 +179,27 @@
     text-decoration-color: var(--darkYellow);
 }
 
-.restaurantMenu--addProduct {
-    font-size: 1.6vw;
-    margin: 2vw 0vw 2vw 0vw;
-    background-color: var(--orange);
-    width: 18vw;
+.restaurantMenu--button {
+    width: 16vw;
     height: 4vw;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+    background: var(--orange);
+    border-radius: 2vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 10vw;
-}
-
-.restaurantMenu--addProduct p {
+    align-items: center;
     color: var(--white);
+    font-size: 1.4vw;
+    border: 0px;
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-color: var(--orange);
 }
+
+.restaurantMenu--button:hover {
+    background-color: var(--yellow);
+    color: var(--darkOrange);
+    text-decoration-color: var(--yellow);
+}
+
