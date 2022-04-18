@@ -9,10 +9,10 @@ export const Header: React.FC<{}> = (props) => {
                 <Link to="/"><img src="https://i.ibb.co/K61PtKT/logo.png" alt="logo" /></Link>
             </div>
             <div className='header--buttons'>
-                <a><Link to="/">home </Link></a>
-                <a>restaurantes</a>
-                <a>cadastrar</a>
-                <a><Link to="/about">sobre</Link></a>
+                <p><Link to="/">home</Link></p>
+                <p><Link to="/restaurantlist">restaurantes</Link></p>
+                <p><Link to="/createrestaurants">cadastro</Link></p>
+                <p><Link to="/about">sobre</Link></p>
             </div>
         </div>
     )}

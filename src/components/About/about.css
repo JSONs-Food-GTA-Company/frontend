@@ -6,73 +6,73 @@
 }
 
 .about--card {
-    margin: 50px 0px 100px 0px;
+    margin: 4vw 0px 6vw 0px;
     background-color: var(--orange);
-    width: 740px;
-    height: 250px;
-    border-radius: 40px;
+    width: 68vw;
+    height: 24vw;
+    border-radius: 4vw;
     display: flex;
 }
 
 .about--title {
     color: var(--darkOrange);
-    font-size: 40px;
+    font-size: 5vw;
     display: flex;
     justify-content: flex-start;
-    font-weight: 500;
-    margin: 20px 0px 0px 0px;
+    margin: 2vw 0px 0px 0px;    
+    font-weight: 700;
 }
 
 .about--subtitle {
     color: var(--darkOrange);
-    font-size: 20px;
+    font-size: 2vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-style: italic;
-    margin: 10px 0px 0px 40px;
+    margin: 1.2vw 0px 0px 0px;
     font-weight: 300;
 }
 
 .about--team {
     color: var(--white);
-    font-size: 20px;
+    font-size: 2.2vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-weight: 500;
-    margin: 20px 0px 0px 40px;
+    font-weight: 700;
+    margin: 1.6vw 0px 0px 4vw;
 }
 
 .about--teamMembers {
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.8vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 8px 0px 0px 40px;
+    margin: 0.6vw 0px 0px 4vw;
     font-weight: 300;
 }
 
 .about--github {
     color: var(--white);
-    font-size: 20px;
+    font-size: 2.2vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-weight: 500;
-    margin: 20px 0px 0px 40px;
+    margin: 2vw 0px 0px 4vw;
 }
 
 .about--githubLink a{
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.8vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 8px 0px 0px 40px;
+    margin: 0.6vw 0px 0px 4vw;
     font-weight: 300;
     text-decoration: underline;
 }
@@ -82,14 +82,113 @@
 }
 
 .about--image {
-    width: 200px;
+    width: 16vw;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
 .about--image img{
-    width: 250px;
+    width: 22vw;
     height: auto;
-    margin: 0px -150px -5px 0px;
+    margin: 0px -18vw 0px 0px;
+}
+
+@media (max-width: 760px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about--card {
+        margin: 30px 0px 10px 0px;
+        background-color: var(--orange);
+        width: 300px;
+        height: 260px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about--title {
+        color: var(--darkOrange);
+        font-size: 36px;
+        display: flex;
+        justify-content: flex-start;
+        margin: 4px 0px 0px 0px;    
+    }
+    
+    .about--subtitle {
+        width: 300px;
+        color: var(--darkOrange);
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 8px 5px 0px 5px;
+    }
+    
+    .about--team {
+        color: var(--white);
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 700;
+        margin: 14px 0px 0px 28px;
+    }
+    
+    .about--teamMembers {
+        color: var(--white);
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 6px 0px 0px 28px;
+        font-weight: 300;
+    }
+    
+    .about--github {
+        color: var(--white);
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 500;
+        margin: 14px 0px 0px 28px;
+    }
+    
+    .about--githubLink a{
+        color: var(--white);
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 6px 0px 0px 28px;
+        font-weight: 300;
+        text-decoration: underline;
+    }
+    
+    .about--githubLink a:hover {
+        color: var(--yellow);
+    }
+    
+    .about--image {
+        width: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+    .about--image img{
+        width: 80px;
+        height: auto;
+        margin: 0px -310px 0px 0px;
+    }
 }
